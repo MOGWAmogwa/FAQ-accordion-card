@@ -26,7 +26,6 @@ titles.forEach((title)=> {
             }
 
             if(list.length>1 && list[list.length-2] === list[list.length-1]){
-                console.log(list);
                 return;
                 
             }
@@ -53,7 +52,6 @@ titles.forEach((title)=> {
             }
 
             if(list.length>1 && list[list.length-2] === list[list.length-1]){
-                console.log(list);
                 return;
             }
             if (list.length>1){
