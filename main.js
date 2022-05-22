@@ -24,15 +24,19 @@ titles.forEach((title)=> {
             if(titleA.className == 'title__A open'){
                 list.push(titleA.dataset.id)
             }
-            console.log(list);
-          
-            if (list.length>1 ){
-            // dataId[list[list.length-2]] === 이전에 선택한 data-id의 태그 (titleA)
-            dataId[list[list.length-2]].classList.remove('open')
-            dataId[list[list.length-2]].previousElementSibling.classList.remove('bold')
-            dataId[list[list.length-2]].previousElementSibling.childNodes[3].classList.remove('rotate')
-            } 
 
+            if(list.length>1 && list[list.length-2] === list[list.length-1]){
+                console.log(list);
+                return;
+                
+            }
+            if (list.length>1){
+                // dataId[list[list.length-2]] === 이전에 선택한 data-id의 태그 (titleA)
+                dataId[list[list.length-2]].classList.remove('open')
+                dataId[list[list.length-2]].previousElementSibling.classList.remove('bold')
+                dataId[list[list.length-2]].previousElementSibling.childNodes[3].classList.remove('rotate')
+            } 
+            
          
         } else {
             // target == title
@@ -47,12 +51,18 @@ titles.forEach((title)=> {
             if(titleA.className == 'title__A open'){
                 list.push(titleA.dataset.id)
             }
-            console.log(list);
-            if (list.length>1 ){
+
+            if(list.length>1 && list[list.length-2] === list[list.length-1]){
+                console.log(list);
+                return;
+            }
+            if (list.length>1){
                 dataId[list[list.length-2]].classList.remove('open')
                 dataId[list[list.length-2]].previousElementSibling.classList.remove('bold')
-                dataId[list[list.length-2]].previousElementSibling.childNodes[3].classList.remove('rotate')                } 
-           
+                dataId[list[list.length-2]].previousElementSibling.childNodes[3].classList.remove('rotate')                
+                
+            } 
+            
 
         }
         
