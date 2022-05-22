@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Global */
+:root{
+
+    /* 💖 All Color 💖 */
+
+    --color-white : white;
+
+    /* color text */
+    --color-very-dark-desaturated-blue : hsl(238, 29%, 16%);
+    --color-soft-red : hsl(14, 88%, 65%);
+
+    /* color background gradient */
+    --color-soft-violet : hsl(273, 75%, 66%);
+    --color-soft-blue : hsl(240, 73%, 65%);
+
+    /* color text */
+    --color-very-dark-grayish : hsl(237, 12%, 33%);
+    --color-dark-grayish-blue : hsl(240, 6%, 50%);
+
+    /* color divider */
+    --color-light-grayish-blue : hsl(240, 5%, 91%);
+    
+
+    /* Font Size */
+    --font-size-large : 40px;
+    --font-size-medium : 36px;
+    --font-size-regular : 24px;
+    --font-size-small : 12px;
+    --font-size-micro : 10px;
+    
+    /* Font Weigh */
+
+    --font-weigh-bold : 700;
+    --font-weigh-regular : 400;
+
+    /* animation */
+
+    --anime-duration : 250ms;
+
+    
+}
+
+/* Universial Tag */
+
+*{
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(135deg, var(--color-soft-violet), var(--color-soft-blue)) no-repeat;
+}
+
+/* Typhography */
+
+h1{
+    font-size: var(--font-size-medium);
+    
+}
+
+button{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+
+/* FAQ Section */
+
+#FAQcard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: var(--font-size-small);
+    background-color: var(--color-white);
+    display: flex;
+    width: 800px;
+    height: 420px;
+    border-radius: 25px;
+
+}
+.page{
+    flex-basis: 50%;
+}
+.imgPage{
+    position: relative;
+    background: url(./images/bg-pattern-desktop.svg) no-repeat;
+    background-position-x: -623px;
+    background-position-y: -356px;
+}
+.imgWoman{
+    width: 100%;
+    position: relative;
+    top: 51px;
+    left: -58px;
+}
+
+.img{
+    position:absolute;
+}
+
+.img.imgBox{
+    top: 136px;
+    left: -93px;
+}
+
+
+
+h1.FAQ{
+    margin: 0;
+}
+
+
+.faqPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding : 20px 30px;
+    padding-left: 5px;
+
+}
+
+.FAQ{
+    flex-basis: 30%;
+    line-height: 114px;
+}
+
+.box__wrapper{
+    flex-basis: 70%;
+}
+
+.box__wrapper{
+    margin-right: 30px;
+}
+
+.divider{
+    margin: 12px 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-light-grayish-blue);
+}
+
+.title{
+    margin-bottom: 10px;
+    color: var(--color-very-dark-desaturated-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.bold{
+    font-weight: var(--font-weigh-bold);
+}
+
+.title:hover{
+    color: var(--color-soft-red);
+}
+
+
+.title__A{
+    color: var(--color-dark-grayish-blue);
+    font-size: var(--font-size-micro);
+    display: none;
+}
+
+.open{
+    display: flex;
+}
+
+.arrow-down{ /* toggle's status === false*/
+    transition: all var(--anime-duration) ease-in;;
+}
+
+.rotate{  /* toggle's status === true*/
+    transform: rotate(180deg);
+    transition: all var(--anime-duration) ease-in;
+}
+
