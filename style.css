@@ -94,18 +94,28 @@ button{
 }
 .page{
     flex-basis: 50%;
+    overflow-x: hidden;
+
 }
+
 .imgPage{
     position: relative;
     background: url(./images/bg-pattern-desktop.svg) no-repeat;
     background-position-x: -623px;
     background-position-y: -356px;
+
+
 }
+
+
+
+
 .imgWoman{
     width: 100%;
     position: relative;
     top: 51px;
     left: -58px;
+    
 }
 
 .img{
@@ -115,6 +125,7 @@ button{
 .img.imgBox{
     top: 136px;
     left: -93px;
+
 }
 
 
@@ -220,9 +231,12 @@ h1.FAQ{
     
     }
 
+    .page{
+        overflow-x: visible;
+    }
+
     .page:nth-child(1){
         flex-basis: 5%;
-
     }
 
     .page:nth-child(2){
